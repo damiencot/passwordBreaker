@@ -15,13 +15,13 @@ def crack_dict(md5, file):
             mot = mot.strip("\n")
             hashmd5 = hashlib.md5(mot.encode("utf8")).hexdigest()
             if hashmd5 == md5:
-                print("Mot de passe trouvé : " + str(mot) + " (" + hashmd5 + ")")
+                print("Password found : " + str(mot) + " (" + hashmd5 + ")")
                 trouve = True
         if not trouve:
-            print("Mot de passe non trouvé :(")
+            print("Password not found :(")
         ofile.close()
     except FileNotFoundError:
-        print("Erreur ; nom de dossier ou fichier introuvable !")
+        print("Erreur : folder or file name not found !")
         sys.exit(1)
     except Exception as err:
         print("Erreur : " + str(err))
