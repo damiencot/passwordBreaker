@@ -7,7 +7,7 @@ from cracker import *
 import multiprocessing
 
 
-def affiche_duree():
+def duration_poster():
     """
     Shows the duration of the program
     :return:
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     done_queue = multiprocessing.Queue()
     cracker = Cracker()
     start = time.time()
-    atexit.register(affiche_duree)
+    atexit.register(duration_poster)
 
     if args.gen:
         print("[*] HASH MD5 TO " + args.gen + " = " + hashlib.md5(args.gen.encode("utf8")).hexdigest())
