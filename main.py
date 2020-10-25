@@ -7,6 +7,7 @@ import hashlib
 import argparse
 
 
+
 def crack_dict(md5, file):
     try:
         trouve = False
